@@ -3,7 +3,7 @@ version: '3.8'
 services:
   postgres_db:
     build:
-      context: ./databases/postgres
+      context: ./postgres
       dockerfile: Dockerfile
     container_name: postgres_db
     env_file:
@@ -20,7 +20,7 @@ services:
       - "5434:5432"
   mysql_db:
     build:
-      context: ./databases/mysql
+      context: ./mysql
       dockerfile: Dockerfile
     container_name: mysql_db
     env_file:
@@ -38,7 +38,7 @@ services:
       - db_data:/var/lib/mysql
   mongo_db:
     build:
-      context: ./databases/mongo
+      context: ./mongo
       dockerfile: Dockerfile
     container_name: mongo_db
     networks:
