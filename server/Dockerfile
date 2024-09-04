@@ -4,9 +4,7 @@ WORKDIR /app
 
 COPY . /app
 
-RUN apt update
-RUN apt install dos2unix
-RUN dos2unix gradlew
+RUN chmod +x ./gradlew
 
 RUN ./gradlew assemble
 

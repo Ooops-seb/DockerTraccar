@@ -23,13 +23,7 @@ networks:
   frontend_network:
     driver: bridge
     external: true
-    ipam:
-      config:
-        - subnet: 172.19.0.0/24
   
   backend_network:
     driver: bridge
     external: true
-    ipam:
-      config:
-        - subnet: 172.18.0.0/24
